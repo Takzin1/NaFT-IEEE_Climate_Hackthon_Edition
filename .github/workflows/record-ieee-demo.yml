@@ -33,7 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 25
     env:
-      NAFT_VIDEO_MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.mode || 'preview' }}
+      NAFT_VIDEO_MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.mode || 'full' }}
       NAFT_VIDEO_EXPLORER: ${{ github.event_name == 'workflow_dispatch' && inputs.open_etherscan && '1' || '0' }}
       NAFT_VIDEO_OUTPUT: video-output
     steps:

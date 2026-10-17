@@ -144,6 +144,10 @@ try{
         img.addEventListener('error',()=>reject(Error('ARCHITECTURE_IMAGE_FAILED')),{once:true});
       });
     });
+    if(mode === 'full') {
+      await focus('.climate-architecture img',500);
+      await sleep(18000);
+    }
     await focus('.climate-trust',850);
   });
   await scene('614-case synthetic engineering evaluation',6,async()=>{
